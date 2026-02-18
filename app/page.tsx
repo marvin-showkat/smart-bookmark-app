@@ -140,14 +140,14 @@ export default function Home() {
             placeholder="Bookmark title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border border-gray-300 p-3 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <input
             type="text"
             placeholder="https://example.com"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border border-gray-300 p-3 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
             onClick={addBookmark}
@@ -176,14 +176,14 @@ export default function Home() {
                   href={bookmark.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full border border-gray-300 p-3 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="text-blue-600 text-sm hover:underline"
                 >
                   {bookmark.url}
                 </a>
               </div>
               <button
                 onClick={() => deleteBookmark(bookmark.id)}
-                className="w-full border border-gray-300 p-3 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="text-sm text-red-500 hover:text-red-700 transition"
               >
                 Delete
               </button>
